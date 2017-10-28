@@ -1,0 +1,21 @@
+los Guards son Servicios y los Servicios son Clases
+
+1) Autenticado (si el usuario es quien dice ser)
+2) Autorización (lo que puede hacer el usuario -Roles-)
+
+canActivate para proteger la ruta padre
+canActivateChildren para proteger las hijas
+canActivatechild (anes de entrar a la ruta)
+canDeActivate(referencia a Componente) (antes de salir de la ruta, x lo general usado para verificar si hay datos que guardar al salir de la pagina)
+
+si hay un emisor (EventEmitter) debe haber alguien que escuche (suscribe -> se ejecuta una vez en el OnInit xq va a la memoria)
+
+app.module -> app.routing -> router module
+delegar el manejo de rutas principal al appRouting
+app.routing.module.ts  (exports para q sea publico un metodo como RouterModule)
+
+forRoot se hace 1 sola vez (y sobre escribe las rutas que existan)
+forChild agrega rutas
+
+CanLoad (rutas q se cargan de forma dinamica, evitar q las rutas se carguen de un usuario no esta autorizado)
+

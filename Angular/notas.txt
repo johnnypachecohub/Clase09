@@ -22,14 +22,16 @@ CanLoad (rutas q se cargan de forma dinamica, evitar q las rutas se carguen de u
 --------------
 forRoot se debe usar una sola vez
 forChild las rutas q se tienen (forRoot), se agregan mas rutas
+exports: convierte un modulo en publico
+los servicios nunca declarar en modulos Compartidos
 
 Clase 10
 ---------
-appModule (la herencia se hace con Imports) -------------> Nucleo (home y cabecera)
-     -> app-routing (se tienen todas las rutas)
-!   !
-!   !----------
-servidores    areas
+appModule (la herencia se hace con Imports)
+!    --> Nucleo (home y cabecera) --> app-routing (forRoot, se tienen todas las rutas)
+!                                         !
+!               !--------------------------
+servidores    areas (de momento solo esto lo hemos modularizado)
                 !
                 areas-routing (forRoot, modulo de rutas importado por Areas, hereda de areas, sus rutas son añadidos a appModule -como herencia de clases-)
 

@@ -19,3 +19,22 @@ forChild agrega rutas
 
 CanLoad (rutas q se cargan de forma dinamica, evitar q las rutas se carguen de un usuario no esta autorizado)
 
+--------------
+forRoot se debe usar una sola vez
+forChild las rutas q se tienen (forRoot), se agregan mas rutas
+
+Clase 10
+---------
+appModule (la herencia se hace con Imports) -------------> Nucleo (home y cabecera)
+     -> app-routing (se tienen todas las rutas)
+!   !
+!   !----------
+servidores    areas
+                !
+                areas-routing (forRoot, modulo de rutas importado por Areas, hereda de areas, sus rutas son añadidos a appModule -como herencia de clases-)
+
+
+loadChildren: formado x 2 partes: 1era parte por la ubicacion#nombreClase
+                                   Ejm: "./areas/areas.module#AreasModule"
+
+app.routing.module.ts -> forRott preloadingStrategy (carga todos los modulos en cache)
